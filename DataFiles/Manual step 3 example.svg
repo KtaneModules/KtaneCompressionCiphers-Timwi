@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   font-size="6px"
+   text-anchor="middle"
+   viewBox="5 0 430 370"
+   version="1.1"
+   id="svg374"
+   sodipodi:docname="Manual step 3 example.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   width="430"
+   height="370">
+  <metadata
+     id="metadata378">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview376"
+     showgrid="true"
+     inkscape:zoom="1.3301205"
+     inkscape:cx="120.88155"
+     inkscape:cy="228.15551"
+     inkscape:current-layer="svg374">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1281"
+       spacingx="10"
+       spacingy="10" />
+  </sodipodi:namedview>
+  <defs
+     id="defs41">
+    <marker
+       id="a"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path2" />
+    </marker>
+    <marker
+       id="n"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path5" />
+    </marker>
+    <marker
+       id="l"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path8" />
+    </marker>
+    <marker
+       id="m"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path11" />
+    </marker>
+    <marker
+       id="c"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path14" />
+    </marker>
+    <marker
+       id="d"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path17" />
+    </marker>
+    <marker
+       id="g"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path20" />
+    </marker>
+    <marker
+       id="h"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path23" />
+    </marker>
+    <marker
+       id="i"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path26" />
+    </marker>
+    <marker
+       id="j"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path29" />
+    </marker>
+    <marker
+       id="e"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path32" />
+    </marker>
+    <marker
+       id="f"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path35" />
+    </marker>
+    <marker
+       id="b"
+       orient="auto"
+       overflow="visible"
+       refX="0"
+       refY="0">
+      <path
+         fill-rule="evenodd"
+         stroke="#000000"
+         stroke-linejoin="round"
+         stroke-width="0.189"
+         d="m -1.93,-1.21 3.28,1.2 -3.28,1.21 c 0.53,-0.71 0.53,-1.68 0,-2.41 z"
+         id="path38" />
+    </marker>
+  </defs>
+  <path
+     d="m 190,230 15,30"
+     id="path1302"
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+  <path
+     d="m 190,290 15,-30 15,30"
+     id="path55"
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+  <circle
+     cx="385.59"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle43" />
+  <text
+     x="385.59"
+     y="264"
+     font-size="10px"
+     id="text45">E</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 400,230 15,30"
+     id="path47" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#a)"
+     d="m 400,230 -10.53,21.06"
+     id="path49" />
+  <text
+     xml:space="preserve"
+     x="385"
+     y="245"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text53"><tspan
+       x="385"
+       y="245"
+       id="tspan51">0</tspan></text>
+  <path
+     d="M 340,110 355,80"
+     id="path1304"
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="M 65,20 95,50"
+     transform="translate(5)"
+     id="path57" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="M 25,80 40,50 m 15,30 15,30"
+     id="path59" />
+  <circle
+     cx="25"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle61" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 55,140 15,-30 15,30"
+     id="path63" />
+  <circle
+     cx="40"
+     cy="110"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle65" />
+  <circle
+     cx="55"
+     cy="140"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle67" />
+  <circle
+     cx="85"
+     cy="140"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle69" />
+  <circle
+     cx="70"
+     cy="110"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle71" />
+  <text
+     x="40"
+     y="114"
+     font-size="10px"
+     id="text73">F</text>
+  <text
+     x="55"
+     y="143.5"
+     font-size="10px"
+     id="text75">C</text>
+  <text
+     x="85"
+     y="143.5"
+     font-size="10px"
+     id="text77">B</text>
+  <text
+     x="25"
+     y="84"
+     font-size="10px"
+     id="text79">D</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 85,80 15,-30 15,30"
+     id="path81" />
+  <circle
+     cx="85"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle83" />
+  <circle
+     cx="115"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle85" />
+  <circle
+     cx="100"
+     cy="50"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle87" />
+  <text
+     x="85"
+     y="84"
+     font-size="10px"
+     id="text89">E</text>
+  <text
+     x="115"
+     y="84"
+     font-size="10px"
+     id="text91">A</text>
+  <text
+     xml:space="preserve"
+     x="140"
+     y="30"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     transform="translate(-70,145)"
+     word-spacing="0"
+     id="text99">010 → F</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#b)"
+     d="M 50,80 39.47,101.06"
+     transform="translate(5)"
+     id="path101" />
+  <circle
+     cx="55"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle103" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#c)"
+     d="M 40,50 50.53,71.06"
+     id="path105" />
+  <circle
+     cx="40"
+     cy="50"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle107" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#d)"
+     d="M 71.04,18.96 48.11,41.89"
+     id="path109" />
+  <circle
+     cx="70"
+     cy="20"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle111" />
+  <text
+     xml:space="preserve"
+     x="45"
+     y="30"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     transform="translate(10)"
+     word-spacing="0"
+     id="text115"><tspan
+       x="45"
+       y="30"
+       id="tspan113">0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="55"
+     y="65"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text119"><tspan
+       x="55"
+       y="65"
+       id="tspan117">1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="35"
+     y="95"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     transform="translate(5)"
+     word-spacing="0"
+     id="text123"><tspan
+       x="35"
+       y="95"
+       id="tspan121">0</tspan></text>
+  <g
+     id="k"
+     transform="translate(30)">
+    <circle
+       cx="235"
+       cy="80"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle125" />
+    <text
+       x="235"
+       y="84"
+       font-size="10px"
+       id="text127">A</text>
+    <path
+       fill="none"
+       fill-rule="evenodd"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#e)"
+       d="m 220,50 10.53,21.06"
+       id="path129" />
+    <path
+       fill="none"
+       stroke="#000000"
+       d="m 145,80 15,-30 15,30 m -15,30 15,-30 15,30"
+       id="path131" />
+    <path
+       fill="none"
+       fill-rule="evenodd"
+       stroke="#000000"
+       d="M 190,20 160,50"
+       id="path133" />
+    <circle
+       cx="145"
+       cy="80"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle135" />
+    <path
+       fill="none"
+       stroke="#000000"
+       d="m 175,140 15,-30 15,30"
+       id="path137" />
+    <circle
+       cx="160"
+       cy="110"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle139" />
+    <circle
+       cx="175"
+       cy="140"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle141" />
+    <circle
+       cx="205"
+       cy="140"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle143" />
+    <circle
+       cx="190"
+       cy="110"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle145" />
+    <text
+       x="160"
+       y="114"
+       font-size="10px"
+       id="text147">F</text>
+    <text
+       x="175"
+       y="143.5"
+       font-size="10px"
+       id="text149">C</text>
+    <text
+       x="205"
+       y="143.5"
+       font-size="10px"
+       id="text151">B</text>
+    <text
+       x="145"
+       y="84"
+       font-size="10px"
+       id="text153">D</text>
+    <path
+       fill="none"
+       stroke="#000000"
+       d="M 205,80 220,50"
+       id="path155" />
+    <circle
+       cx="205"
+       cy="80"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle157" />
+    <circle
+       cx="220"
+       cy="50"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle159" />
+    <text
+       x="205"
+       y="84"
+       font-size="10px"
+       id="text161">E</text>
+    <text
+       xml:space="preserve"
+       x="140"
+       y="30"
+       stroke-width="5"
+       font-family="'Special Elite'"
+       font-size="13.33px"
+       font-weight="400"
+       letter-spacing="0"
+       paint-order="stroke fill markers"
+       transform="translate(50,145)"
+       word-spacing="0"
+       id="text169">11 → A</text>
+    <circle
+       cx="175"
+       cy="80"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle171" />
+    <circle
+       cx="160"
+       cy="50"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle173" />
+    <text
+       xml:space="preserve"
+       x="55"
+       y="65"
+       stroke-width="5"
+       font-family="'Special Elite'"
+       font-size="13.33px"
+       font-weight="400"
+       letter-spacing="0"
+       paint-order="stroke fill markers"
+       transform="translate(155,-30)"
+       word-spacing="0"
+       id="text177"><tspan
+         x="55"
+         y="65"
+         id="tspan175">1</tspan></text>
+    <text
+       xml:space="preserve"
+       x="55"
+       y="65"
+       stroke-width="5"
+       font-family="'Special Elite'"
+       font-size="13.33px"
+       font-weight="400"
+       letter-spacing="0"
+       paint-order="stroke fill markers"
+       transform="translate(180)"
+       word-spacing="0"
+       id="text181"><tspan
+         x="55"
+         y="65"
+         id="tspan179">1</tspan></text>
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       marker-end="url(#f)"
+       d="m 185,20 22.93,22.93"
+       transform="translate(5)"
+       id="path183" />
+    <circle
+       cx="190"
+       cy="20"
+       r="10"
+       fill="#ffffff"
+       stroke="#000000"
+       id="circle185" />
+  </g>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 370,20 30,30"
+     id="path188" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="M 325,80 340,50"
+     id="path190" />
+  <circle
+     cx="325"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle192" />
+  <circle
+     cx="340"
+     cy="110"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle194" />
+  <circle
+     cx="355"
+     cy="140"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle196" />
+  <text
+     x="340"
+     y="114"
+     font-size="10px"
+     id="text198">F</text>
+  <text
+     x="355"
+     y="143.5"
+     font-size="10px"
+     id="text200">C</text>
+  <text
+     x="325"
+     y="84"
+     font-size="10px"
+     id="text202">D</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 385,80 15,-30 15,30"
+     id="path204" />
+  <circle
+     cx="385"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle206" />
+  <circle
+     cx="415"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle208" />
+  <circle
+     cx="400"
+     cy="50"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle210" />
+  <text
+     x="385"
+     y="84"
+     font-size="10px"
+     id="text212">E</text>
+  <text
+     x="415"
+     y="84"
+     font-size="10px"
+     id="text214">A</text>
+  <text
+     xml:space="preserve"
+     x="370"
+     y="175"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text222"><tspan
+       x="370"
+       y="175"
+       id="tspan216">0110 → C</tspan></text>
+  <text
+     xml:space="preserve"
+     x="355"
+     y="30"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text226"><tspan
+       x="355"
+       y="30"
+       id="tspan224">0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="355"
+     y="65"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text230"><tspan
+       x="355"
+       y="65"
+       id="tspan228">1</tspan></text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 370,110 15,30"
+     id="path232" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#g)"
+     d="m 370,110 -10.53,21.06"
+     id="path234" />
+  <text
+     xml:space="preserve"
+     x="355"
+     y="125"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text238"><tspan
+       x="355"
+       y="125"
+       id="tspan236">0</tspan></text>
+  <circle
+     cx="370"
+     cy="110"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle240" />
+  <circle
+     cx="385"
+     cy="140"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle242" />
+  <text
+     x="385"
+     y="143.5"
+     font-size="10px"
+     id="text244">B</text>
+  <text
+     xml:space="preserve"
+     x="370"
+     y="95"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text248"><tspan
+       x="370"
+       y="95"
+       id="tspan246">1</tspan></text>
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#h)"
+     d="m 355,80 10.53,21.06"
+     id="path250" />
+  <circle
+     cx="355"
+     cy="80"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle252" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#i)"
+     d="m 340,50 10.53,21.06"
+     id="path254" />
+  <circle
+     cx="340"
+     cy="50"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle256" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#j)"
+     d="M 371.04,18.96 348.11,41.89"
+     id="path258" />
+  <circle
+     cx="370"
+     cy="20"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle260" />
+  <use
+     xlink:href="#k"
+     width="100%"
+     height="100%"
+     transform="translate(-150,180)"
+     id="use262"
+     x="0"
+     y="0" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 220,200 30,30"
+     id="path264" />
+  <circle
+     cx="175"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle266" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 205,320 15,-30 15,30"
+     id="path268" />
+  <circle
+     cx="190"
+     cy="290"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle270" />
+  <circle
+     cx="205"
+     cy="320"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle272" />
+  <circle
+     cx="235"
+     cy="320"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle274" />
+  <circle
+     cx="220"
+     cy="290"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle276" />
+  <text
+     x="190"
+     y="294"
+     font-size="10px"
+     id="text278">F</text>
+  <text
+     x="205"
+     y="323.5"
+     font-size="10px"
+     id="text280">C</text>
+  <text
+     x="235"
+     y="323.5"
+     font-size="10px"
+     id="text282">B</text>
+  <text
+     x="175"
+     y="264"
+     font-size="10px"
+     id="text284">D</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 235,260 15,-30 15,30"
+     id="path286" />
+  <circle
+     cx="235"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle288" />
+  <circle
+     cx="265"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle290" />
+  <circle
+     cx="250"
+     cy="230"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle292" />
+  <text
+     x="235"
+     y="264"
+     font-size="10px"
+     id="text294">E</text>
+  <text
+     x="265"
+     y="264"
+     font-size="10px"
+     id="text296">A</text>
+  <text
+     xml:space="preserve"
+     x="220"
+     y="355"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text304"><tspan
+       x="220"
+       y="355"
+       id="tspan298">00 → D</tspan></text>
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#l)"
+     d="m 190,230 -10.53,21.06"
+     id="path306" />
+  <circle
+     cx="205"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle308" />
+  <circle
+     cx="190"
+     cy="230"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle310" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#m)"
+     d="m 221.04,198.96 -22.93,22.93"
+     id="path312" />
+  <circle
+     cx="220"
+     cy="200"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle314" />
+  <text
+     xml:space="preserve"
+     x="205"
+     y="210"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text318"><tspan
+       x="205"
+       y="210"
+       id="tspan316">0</tspan></text>
+  <text
+     xml:space="preserve"
+     x="175"
+     y="245"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text322"><tspan
+       x="175"
+       y="245"
+       id="tspan320">0</tspan></text>
+  <circle
+     cx="415.59"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle324" />
+  <text
+     x="415.59"
+     y="264"
+     font-size="10px"
+     id="text326">A</text>
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 325.59,260 15,-30 15,30 m -15,30 15,-30 15,30"
+     id="path328" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 370.59,200 -30,30"
+     id="path330" />
+  <circle
+     cx="325.59"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle332" />
+  <path
+     fill="none"
+     stroke="#000000"
+     d="m 355.59,320 15,-30 15,30"
+     id="path334" />
+  <circle
+     cx="340.59"
+     cy="290"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle336" />
+  <circle
+     cx="355.59"
+     cy="320"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle338" />
+  <circle
+     cx="385.59"
+     cy="320"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle340" />
+  <circle
+     cx="370.59"
+     cy="290"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle342" />
+  <text
+     x="340.59"
+     y="294"
+     font-size="10px"
+     id="text344">F</text>
+  <text
+     x="355.59"
+     y="323.5"
+     font-size="10px"
+     id="text346">C</text>
+  <text
+     x="385.59"
+     y="323.5"
+     font-size="10px"
+     id="text348">B</text>
+  <text
+     x="325.59"
+     y="264"
+     font-size="10px"
+     id="text350">D</text>
+  <circle
+     cx="400.59"
+     cy="230"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle352" />
+  <text
+     xml:space="preserve"
+     x="370.59"
+     y="355"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text360"><tspan
+       x="370.59"
+       y="355"
+       id="tspan354">10 → E</tspan></text>
+  <circle
+     cx="355.59"
+     cy="260"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle362" />
+  <circle
+     cx="340.59"
+     cy="230"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle364" />
+  <text
+     xml:space="preserve"
+     x="390.59"
+     y="215"
+     stroke-width="5"
+     font-family="'Special Elite'"
+     font-size="13.33px"
+     font-weight="400"
+     letter-spacing="0"
+     paint-order="stroke fill markers"
+     word-spacing="0"
+     id="text368"><tspan
+       x="390.59"
+       y="215"
+       id="tspan366">1</tspan></text>
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     marker-end="url(#n)"
+     d="m 370.59,200 22.92,22.93"
+     id="path370" />
+  <circle
+     cx="370.59"
+     cy="200"
+     r="10"
+     fill="#ffffff"
+     stroke="#000000"
+     id="circle372" />
+</svg>

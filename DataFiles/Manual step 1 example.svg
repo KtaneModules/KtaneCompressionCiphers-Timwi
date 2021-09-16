@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   font-size="6"
+   text-anchor="middle"
+   viewBox="5 0 400 360"
+   version="1.1"
+   id="svg1723"
+   sodipodi:docname="Manual step 1 example.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata1729">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1727" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview1725"
+     showgrid="true"
+     inkscape:zoom="1.3541667"
+     inkscape:cx="158.83623"
+     inkscape:cy="166.20382"
+     inkscape:current-layer="svg1723"
+     inkscape:snap-text-baseline="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1731"
+       spacingx="5"
+       spacingy="5"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m70 250 15-30 15 30"
+     id="path1463" />
+  <circle
+     cx="85"
+     cy="220"
+     r="10"
+     fill="#ccc"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1465" />
+  <text
+     x="85"
+     y="222.5"
+     font-size="7"
+     id="text1467">42</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m85 280 15-30 15 30"
+     id="path1469" />
+  <circle
+     cx="70"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1471" />
+  <circle
+     cx="100"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1473" />
+  <path
+     fill="none"
+     stroke="#000"
+     d="m100 310 15-30 15 30"
+     id="path1475" />
+  <circle
+     cx="85"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1477" />
+  <circle
+     cx="100"
+     cy="310"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1479" />
+  <circle
+     cx="130"
+     cy="310"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1481" />
+  <circle
+     cx="115"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1483" />
+  <text
+     x="85"
+     y="284"
+     font-size="10"
+     id="text1485">F</text>
+  <text
+     x="100"
+     y="313.5"
+     font-size="10"
+     id="text1487">C</text>
+  <text
+     x="130"
+     y="313.5"
+     font-size="10"
+     id="text1489">B</text>
+  <text
+     x="70"
+     y="254"
+     font-size="10"
+     id="text1491">D</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m310 130 15-30 15 30"
+     id="path1493" />
+  <circle
+     cx="325"
+     cy="100"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1495" />
+  <text
+     x="325"
+     y="102.5"
+     font-size="7"
+     id="text1497">42</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m235 250 30-30 30 30"
+     id="path1499" />
+  <circle
+     cx="25"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1501" />
+  <circle
+     cx="55"
+     cy="20"
+     r="10"
+     fill="#eee"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1503" />
+  <circle
+     cx="85"
+     cy="20"
+     r="10"
+     fill="#ccc"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1505" />
+  <circle
+     cx="115"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1507" />
+  <circle
+     cx="145"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1509" />
+  <circle
+     cx="175"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1511" />
+  <text
+     x="25"
+     y="20.64"
+     font-size="10"
+     id="text1513">A</text>
+  <text
+     x="54.95"
+     y="20.64"
+     font-size="10"
+     id="text1515">B</text>
+  <text
+     x="84.95"
+     y="20.64"
+     font-size="10"
+     id="text1517">C</text>
+  <text
+     x="114.95"
+     y="20.64"
+     font-size="10"
+     id="text1519">D</text>
+  <text
+     x="144.95"
+     y="20.64"
+     font-size="10"
+     id="text1521">E</text>
+  <text
+     x="174.95"
+     y="20.64"
+     font-size="10"
+     id="text1523">F</text>
+  <text
+     x="25"
+     y="27.21"
+     id="text1525">26</text>
+  <text
+     x="55"
+     y="27.21"
+     id="text1527">10</text>
+  <text
+     x="85"
+     y="27.21"
+     id="text1529">1</text>
+  <text
+     x="115"
+     y="27.21"
+     id="text1531">21</text>
+  <text
+     x="145"
+     y="27.21"
+     id="text1533">23</text>
+  <text
+     x="175"
+     y="27.21"
+     id="text1535">10</text>
+  <text
+     x="75"
+     y="40"
+     id="text1537"
+     style="text-align:start;text-anchor:start">lowest</text>
+  <text
+     x="75"
+     y="47.25"
+     id="text1539"
+     style="text-align:start;text-anchor:start">score</text>
+  <text
+     x="65"
+     y="40"
+     id="text1541"
+     style="text-align:end;text-anchor:end">second-</text>
+  <text
+     x="65"
+     y="47.25"
+     id="text1543"
+     style="text-align:end;text-anchor:end">lowest score</text>
+  <text
+     x="65"
+     y="54.5"
+     id="text1545"
+     style="text-align:end;text-anchor:end">(after tie break)</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="M205 20h15m-7.5-5 7.5 5-7.5 5M355 50l15-30 15 30"
+     id="path1547" />
+  <circle
+     cx="355"
+     cy="50"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1549" />
+  <circle
+     cx="385"
+     cy="50"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1551" />
+  <circle
+     cx="370"
+     cy="20"
+     r="10"
+     fill="#eee"
+     stroke="#000"
+     id="circle1553" />
+  <text
+     x="355"
+     y="53.5"
+     font-size="10"
+     id="text1555">C</text>
+  <text
+     x="385"
+     y="53.5"
+     font-size="10"
+     id="text1557">B</text>
+  <text
+     x="370"
+     y="22.5"
+     font-size="7"
+     id="text1559">11</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="M30 100h15m-7.5-5 7.5 5-7.5 5M150 130l15-30 15 30"
+     id="path1561" />
+  <circle
+     cx="75"
+     cy="100"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1563" />
+  <circle
+     cx="105"
+     cy="100"
+     r="10"
+     fill="#ccc"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1565" />
+  <circle
+     cx="135"
+     cy="100"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1567" />
+  <circle
+     cx="165"
+     cy="100"
+     r="10"
+     fill="#eee"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1569" />
+  <text
+     x="75"
+     y="101.5"
+     font-size="10"
+     id="text1571">A</text>
+  <text
+     x="105"
+     y="101.5"
+     font-size="10"
+     id="text1573">D</text>
+  <text
+     x="135"
+     y="101.5"
+     font-size="10"
+     id="text1575">E</text>
+  <text
+     x="75"
+     y="107.5"
+     id="text1577">26</text>
+  <text
+     x="105"
+     y="107.5"
+     id="text1579">21</text>
+  <text
+     x="135"
+     y="107.5"
+     id="text1581">23</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m165 160 15-30 15 30"
+     id="path1583" />
+  <circle
+     cx="150"
+     cy="130"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1585" />
+  <circle
+     cx="165"
+     cy="160"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1587" />
+  <circle
+     cx="195"
+     cy="160"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1589" />
+  <circle
+     cx="180"
+     cy="130"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1591" />
+  <text
+     x="150"
+     y="134"
+     font-size="10"
+     id="text1593">F</text>
+  <text
+     x="165"
+     y="163.5"
+     font-size="10"
+     id="text1595">C</text>
+  <text
+     x="195"
+     y="163.5"
+     font-size="10"
+     id="text1597">B</text>
+  <text
+     x="165"
+     y="102.5"
+     font-size="7"
+     id="text1599">21</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="M215 100h15m-7.5-5 7.5 5-7.5 5M30 220h15m-7.5-5 7.5 5-7.5 5M130 250l15-30 15 30"
+     id="path1601" />
+  <circle
+     cx="130"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1603" />
+  <circle
+     cx="160"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1605" />
+  <circle
+     cx="145"
+     cy="220"
+     r="10"
+     fill="#eee"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1607" />
+  <text
+     x="145"
+     y="222.5"
+     font-size="7"
+     id="text1609">49</text>
+  <text
+     x="130"
+     y="254"
+     font-size="10"
+     id="text1611">E</text>
+  <text
+     x="160"
+     y="254"
+     font-size="10"
+     id="text1613">A</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="M190 220h15m-7.5-5 7.5 5-7.5 5"
+     id="path1615" />
+  <circle
+     cx="265"
+     cy="220"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1617" />
+  <circle
+     cx="250"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1619" />
+  <circle
+     cx="280"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1621" />
+  <circle
+     cx="310"
+     cy="20"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1623" />
+  <circle
+     cx="340"
+     cy="20"
+     r="10"
+     fill="#ccc"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1625" />
+  <text
+     x="250"
+     y="20.64"
+     font-size="10"
+     id="text1627">A</text>
+  <text
+     x="279.95"
+     y="20.64"
+     font-size="10"
+     id="text1629">D</text>
+  <text
+     x="309.95"
+     y="20.64"
+     font-size="10"
+     id="text1631">E</text>
+  <text
+     x="339.95"
+     y="20.64"
+     font-size="10"
+     id="text1633">F</text>
+  <text
+     x="250"
+     y="27.21"
+     id="text1635">26</text>
+  <text
+     x="280"
+     y="27.21"
+     id="text1637">21</text>
+  <text
+     x="310"
+     y="27.21"
+     id="text1639">23</text>
+  <text
+     x="340"
+     y="27.21"
+     id="text1641">10</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m325 160 15-30 15 30"
+     id="path1643" />
+  <circle
+     cx="265"
+     cy="100"
+     r="10"
+     fill="#eee"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1645" />
+  <circle
+     cx="310"
+     cy="130"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1647" />
+  <circle
+     cx="295"
+     cy="100"
+     r="10"
+     fill="#ccc"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1649" />
+  <circle
+     cx="340"
+     cy="130"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1651" />
+  <text
+     x="265"
+     y="101.5"
+     font-size="10"
+     id="text1653">A</text>
+  <text
+     x="295"
+     y="101.5"
+     font-size="10"
+     id="text1655">E</text>
+  <text
+     x="265"
+     y="107.5"
+     id="text1657">26</text>
+  <text
+     x="295"
+     y="107.5"
+     id="text1659">23</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m340 190 15-30 15 30"
+     id="path1661" />
+  <circle
+     cx="325"
+     cy="160"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1663" />
+  <circle
+     cx="340"
+     cy="190"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1665" />
+  <circle
+     cx="370"
+     cy="190"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1667" />
+  <circle
+     cx="355"
+     cy="160"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1669" />
+  <text
+     x="325"
+     y="164"
+     font-size="10"
+     id="text1671">F</text>
+  <text
+     x="340"
+     y="193.5"
+     font-size="10"
+     id="text1673">C</text>
+  <text
+     x="370"
+     y="193.5"
+     font-size="10"
+     id="text1675">B</text>
+  <text
+     x="310"
+     y="134"
+     font-size="10"
+     id="text1677">D</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m220 280 15-30 15 30"
+     id="path1679" />
+  <circle
+     cx="235"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1681" />
+  <path
+     fill="none"
+     stroke="#000"
+     d="m235 310 15-30 15 30"
+     id="path1685" />
+  <circle
+     cx="220"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1687" />
+  <circle
+     cx="250"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1689" />
+  <path
+     fill="none"
+     stroke="#000"
+     d="m250 340 15-30 15 30"
+     id="path1691" />
+  <circle
+     cx="235"
+     cy="310"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1693" />
+  <circle
+     cx="250"
+     cy="340"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1695" />
+  <circle
+     cx="280"
+     cy="340"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1697" />
+  <circle
+     cx="265"
+     cy="310"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     id="circle1699" />
+  <text
+     x="235"
+     y="314"
+     font-size="10"
+     id="text1701">F</text>
+  <text
+     x="250"
+     y="343.5"
+     font-size="10"
+     id="text1703">C</text>
+  <text
+     x="280"
+     y="343.5"
+     font-size="10"
+     id="text1705">B</text>
+  <text
+     x="220"
+     y="284"
+     font-size="10"
+     id="text1707">D</text>
+  <path
+     fill="none"
+     stroke="#000"
+     d="m280 280 15-30 15 30"
+     id="path1709" />
+  <circle
+     cx="280"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1711" />
+  <circle
+     cx="310"
+     cy="280"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1713" />
+  <circle
+     cx="295"
+     cy="250"
+     r="10"
+     fill="#fff"
+     stroke="#000"
+     style="font-variation-settings:normal"
+     id="circle1715" />
+  <text
+     x="280"
+     y="284"
+     font-size="10"
+     id="text1719">E</text>
+  <text
+     x="310"
+     y="284"
+     font-size="10"
+     id="text1721">A</text>
+</svg>
