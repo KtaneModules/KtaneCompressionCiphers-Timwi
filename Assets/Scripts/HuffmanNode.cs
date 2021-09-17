@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 
 namespace HuffmanCipher
 {
@@ -10,6 +8,8 @@ namespace HuffmanCipher
         public int Score { get; private set; }
         public HuffmanNode(int freq) { Score = freq; }
         public abstract IEnumerable<int> EncodeBits(char letter);
+        public abstract IEnumerable<int> EncodeTreeStructure();
+        public abstract void Populate(string alphabet, ref int ix);
     }
 
     sealed class HuffmanBranch : HuffmanNode
@@ -35,6 +35,15 @@ namespace HuffmanCipher
         {
             return string.Format("[{0}{1}]", Left, Right);
         }
+        public override IEnumerable<int> EncodeTreeStructure()
+        {
+            return new[] { 1 }.Concat(Left.EncodeTreeStructure()).Concat(Right.EncodeTreeStructure());
+        }
+        public override void Populate(string alphabet, ref int ix)
+        {
+            Left.Populate(alphabet, ref ix);
+            Right.Populate(alphabet, ref ix);
+        }
     }
 
     sealed class HuffmanLeaf : HuffmanNode
@@ -48,6 +57,15 @@ namespace HuffmanCipher
         public override string ToString()
         {
             return Letter.ToString();
+        }
+        public override IEnumerable<int> EncodeTreeStructure()
+        {
+            return new[] { 0 };
+        }
+        public override void Populate(string alphabet, ref int ix)
+        {
+            Letter = alphabet[ix];
+            ix++;
         }
     }
 }

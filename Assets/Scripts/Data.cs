@@ -1,12 +1,31 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+
+using Rnd = UnityEngine.Random;
 
 namespace Words
 {
-    class Data
+    sealed class Data
     {
-        public readonly List<List<string>> allWords = new List<List<string>>()
+        public string ChooseWord(int minLength, int maxLength)
         {
-            new List<string>()
+            var candidates = Enumerable.Range(minLength - 4, maxLength - minLength + 1).ToArray();
+            var cumulativeWeights = Enumerable.Range(0, candidates.Length).Select(i => candidates.Take(i + 1).Sum(ix => allWords[ix].Count)).ToArray();
+            var randomIx = Rnd.Range(0, cumulativeWeights.Last());
+            var lstIx = 0;
+            while (randomIx >= allWords[lstIx].Count)
+            {
+                randomIx -= allWords[lstIx].Count;
+                lstIx++;
+            }
+            var word = allWords[lstIx][randomIx];
+            allWords[lstIx].RemoveAt(randomIx);
+            return word;
+        }
+
+        private readonly List<string>[] allWords = new List<string>[]
+        {
+            new List<string>
             {
                 "ALSO","AREA","ABLE","AWAY","ACID","AGED","ACRE","ARCH","AXIS","ALLY","ALAS","AURA","ATOM","AXES","ACHE","AMEN","ACNE","AXLE","AQUA",
                 "BEEN","BACK","BOTH","BEST","BOOK","BASE","BODY","BILL","BLUE","BALL","BORN","BABY","BEAT","BAND","BEAR","BELL","BUSY","BOND","BUSH","BOAT","BOWL","BIRD","BLOW","BONE","BATH","BOSS","BELT","BOMB","BURN","BASS","BOLD","BEEF","BENT","BEND","BIKE","BOOT","BEAM","BLEW","BARN","BUZZ","BEAN","BATS","BUST","BOLT","BURY","BOIL","BAKE","BUMP","BAIT","BULB","BLUR","BEAD",
@@ -35,7 +54,7 @@ namespace Words
                 "YOUR","YEAR","YARD","YARN","YOGA","YELL","YAWN",
                 "ZONE","ZOOM"
             },
-            new List<string>()
+            new List<string>
             {
                 "ABOUT", "AFTER", "AMONG", "AGAIN", "ABOVE", "ALONG", "AWARD", "ALLOW", "ALONE", "AHEAD", "APPLY", "AWARE", "AVOID", "AGENT", "ASSET", "AGREE", "ADULT", "APART", "AUDIO", "ASIDE", "ARRAY", "ALIVE", "ARGUE", "APPLE", "ACUTE", "ADMIT", "ARENA", "ACTOR", "ALERT", "ALBUM", "ALTER", "ANGLE", "ALARM", "ADAPT", "ANGEL", "ANKLE", "ALIEN", "ARROW", "ALLEY", "AWAKE", "AMEND", "ARMOR", "ALIGN", "ALTAR", "ALLOY", "AMBER", "ATTIC", "AGILE", "AROMA", "APRON", "ACORN", "ADORE", "AMUSE", "ABYSS",
                 "BOARD", "BEGAN", "BRING", "BUILT", "BLACK", "BASIC", "BELOW", "BUILD", "BEGIN", "BREAK", "BROWN", "BEACH", "BRAND", "BLOCK", "BEGUN", "BRIEF", "BROKE", "BOUND", "BOOST", "BUYER", "BAKER", "BLIND", "BREAD", "BENCH", "BURST", "BONUS", "BRICK", "BLEND", "BRUSH", "BLANK", "BUNCH", "BRAVE", "BLOWN", "BLAST", "BATCH", "BRASS", "BACON", "BAKED", "BLOOM", "BERRY", "BEARD", "BRAKE", "BOXER", "BURNT", "BADGE", "BLAND", "BLISS", "BUNNY", "BULKY", "BLUFF", "BLINK",
@@ -63,7 +82,7 @@ namespace Words
                 "YOUNG", "YOUTH", "YIELD", "YACHT", "YEAST", "YODEL", "YELLS",
                 "ZEBRA"
             },
-            new List<string>()
+            new List<string>
             {
                 "ALUMNI", "AROUND", "ACROSS", "ALWAYS", "ACCESS", "ALMOST", "ACTION", "ACTUAL", "ANNUAL", "AMOUNT", "ANYONE", "ACTIVE", "ANSWER", "AGENCY", "APPEAR", "AFFECT", "ACCEPT", "ADVOCE", "APPEAL", "ATTACK", "AUTHOR", "ANIMAL", "ACTING", "ASSUME", "ASSIST", "ATTEND", "ANYWAY", "ASPECT", "AFFORD", "ARTIST", "ALPACA", "AFRAID", "AGENDA", "ARRIVE", "ADVISE", "ALLIED", "ABSENT", "ADJUST", "AUTUMN", "ACCENT", "ABSORB", "ASLEEP", "ANCHOR", "ATOMIC", "ATTACH", "ATTAIN", "ASSERT", "ABSURD", "ASSIGN", "ADMIRE", "ARCADE", "ARCHER", "ABRUPT", "AFFIRM", "ASHORE", "ACCUSE", "ANALOG", "ALMOND", "APATHY", "ASCEND",
                 "BEFORE", "BETTER", "BECOME", "BEHIND", "BECAME", "BEYOND", "BUDGET", "BOTTOM", "BRANCH", "BOUGHT", "BATTLE", "BRIDGE", "BROKEN", "BANDIT", "BACKED", "BRIGHT", "BEHALF", "BEAUTY", "BAYOUS", "BORDER", "BREATH", "BOTTLE", "BELONG", "BUTTON", "BARELY", "BESIDE", "BREACH", "BITTER", "BOTHER", "BUTTER", "BAOBAB", "BUTLER", "BASKET", "BALLET", "BRONZE", "BARREL", "BORROW", "BEHAVE", "BUNDLE", "BANNER", "BANKER", "BOXING", "BREEZE", "BUBBLE", "BINARY", "BUCKET", "BOUNCE", "BROWSE", "BUFFET", "BANANA", "BOILER", "BEACON", "BEWARE", "BAKERY", "BOILED", "BUMPER", "BINDER", "BEAVER", "BADGER", "BAMBOO",
@@ -91,7 +110,7 @@ namespace Words
                 "YELLOW", "YEARLY", "YOGURT", "YONDER", "YACHTS",
                 "ZODIAC", "ZOMBIE", "ZIPPER", "ZIGZAG", "ZEALOT", "ZINGER", "ZAPPED", "ZAPPER", "ZIGGED", "ZAGGED", "ZOOMED", "ZEBRAS", "ZEROES"
             },
-            new List<string>()
+            new List<string>
             {
                 "ANOTHER", "AGAINST", "ALREADY", "ABILITY", "AVERAGE", "ACCOUNT", "ADDRESS", "ACHIEVE", "APPLIED", "ATTEMPT", "ARTICLE", "ADVANCE", "ACQUIRE", "ABSENCE", "ATTRACT", "ANYBODY", "ANCIENT", "ANALYST", "ARRIVAL", "ACADEMY", "ADVISER", "AUCTION", "ANXIETY", "ARRANGE", "ANXIOUS", "APPROVE", "ARCHIVE", "AMATEUR", "APPOINT", "AWKWARD", "ANALYZE", "AUDITOR", "ANYMORE", "ALRIGHT", "ATHLETE", "ANTIQUE", "ANALOGY", "ANYTIME", "AWESOME", "ARTWORK", "AMUSING", "AMNESTY", "ANATOMY", "APOLOGY", "AQUATIC", "AGILITY", "APPLAUD", "ALLERGY", "AUDIBLE", "ABOLISH", "AMBIENT", "ANTENNA", "ADAPTER", "ABDOMEN", "AEROBIC", "ASPHALT", "ALGEBRA",
                 "BETWEEN", "BECAUSE", "BELIEVE", "BENEFIT", "BROUGHT", "BILLION", "BALANCE", "BANKING", "BENEATH", "BEDROOM", "BINDING", "BATTERY", "BARRIER", "BIOLOGY", "BUILDER", "BARGAIN", "BIDDING", "BROADEN", "BELOVED", "BLANKET", "BIZARRE", "BICYCLE", "BUFFALO", "BOWLING", "BALLOON", "BRIGADE", "BOULDER", "BANQUET", "BOILING", "BAGGAGE", "BONDING", "BRACKET", "BALCONY", "BRUSHED", "BOYCOTT", "BLASTED", "BLATANT", "BANANAS", "BLOSSOM", "BRITTLE", "BUOYANT", "BISCUIT", "BRAVERY", "BURGLAR", "BROWNIE", "BOLOGNA",
@@ -119,7 +138,7 @@ namespace Words
                 "YAWNING", "YOUNGER", "YOGURTS", "YELLING",
                 "ZEALOUS", "ZOOLOGY", "ZIPLOCK", "ZOMBIES", "ZIPPERS", "ZIPPING"
             },
-            new List<string>()
+            new List<string>
             {
                 "ALTHOUGH", "ANALYSIS", "APPROACH", "ACTUALLY", "ANYTHING", "ACTIVITY", "ADDITION", "ACHIEVED", "ACCEPTED", "ACQUIRED", "AFFECTED", "APPROVAL", "AUDIENCE", "ALLIANCE", "AIRCRAFT", "ANYWHERE", "ACADEMIC", "ACCURATE", "ASSEMBLY", "ARGUMENT", "ADEQUATE", "ATTACHED", "APPARENT", "ACCIDENT", "ACCURACY", "ANNOUNCE", "ABSOLUTE", "ADJUSTED", "ASSUMING", "ABSTRACT", "ADJACENT", "AVIATION", "ARTISTIC", "ADVOCATE", "APPENDIX", "ATHLETIC", "APPETITE", "ANIMATED", "AMBITION", "ABNORMAL", "ABUNDANT", "ASSEMBLE", "ALLOCATE", "ANTELOPE", "ALTITUDE", "AUTOMATE", "AQUARIUM", "APPLAUSE", "ADHESIVE", "ALLERGIC", "AUDITION", "ALPHABET", "ANCESTOR", "ANTIDOTE",
                 "BUSINESS", "BUILDING", "BECOMING", "BREAKING", "BIRTHDAY", "BULLETIN", "BATHROOM", "BASEBALL", "BOUNDARY", "BACKBONE", "BRIEFING", "BROCHURE", "BACKWARD", "BASEMENT", "BEVERAGE", "BALLROOM", "BARBECUE", "BOUNCING", "BACKYARD", "BEGINNER", "BLOOMING", "BAREFOOT", "BROCCOLI", "BLIZZARD", "BRACELET", "BACKPACK", "BOOKMARK", "BOOKCASE", "BILLIARD", "BLOWFISH",

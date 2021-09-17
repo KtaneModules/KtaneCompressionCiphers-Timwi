@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-size="6" font-family="Special Elite" text-anchor="middle" viewBox="5 0 430 400">
+  <path fill="none" stroke="#000" d="M85 20h15m-7.5-5 7.5 5-7.5 5" />
+  <text x="50" y="50" font-size="24" transform="translate(-25 -20)">1</text>
+  <g id="a" stroke="#000" transform="translate(-10 -50)">
+    <path fill="none" d="m25 100 30-30 30 30" />
+    <circle cx="55" cy="70" r="10" fill="#fff" />
+  </g>
+  <path fill="none" stroke="#000" d="M200 20h15m-7.5-5 7.5 5-7.5 5" />
+  <text x="50" y="50" font-size="24" transform="translate(95 10)">1</text>
+  <g id="b" transform="translate(-10 -50)">
+    <use xlink:href="#a" transform="translate(120 50)" />
+    <path fill="none" stroke="#000" d="m120 130 15-30 15 30" />
+    <circle cx="135" cy="100" r="10" fill="#fff" stroke="#000" />
+  </g>
+  <g id="c" transform="translate(0 -50)">
+    <use xlink:href="#b" transform="translate(130 50)" />
+    <circle cx="240" cy="130" r="10" fill="#fff" stroke="#000" />
+    <text x="240" y="134" font-size="10">C</text>
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(170 40)">0</text>
+  <path fill="none" stroke="#000" d="M325 20h15m-7.5-5 7.5 5-7.5 5" />
+  <text x="50" y="50" font-size="24" transform="translate(350 40)">0</text>
+  <g id="d" transform="translate(10 -50)">
+    <use xlink:href="#c" transform="translate(100 50)" />
+    <circle cx="370" cy="130" r="10" fill="#fff" stroke="#000" />
+    <text x="370" y="134" font-size="10">A</text>
+  </g>
+  <path fill="none" stroke="#000" d="M150 130h15m-7.5-5 7.5 5-7.5 5" />
+  <g id="e" transform="translate(10 -40)">
+    <use xlink:href="#d" transform="translate(-310 150)" />
+    <path fill="none" stroke="#000" d="m100 230 15-30 15 30" />
+    <circle cx="115" cy="200" r="10" fill="#fff" stroke="#000" />
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(55 120)">1</text>
+  <g id="f" transform="translate(-10 -40)">
+    <use xlink:href="#e" transform="translate(140 40)" />
+    <path fill="none" stroke="#000" d="m235 260 15-30 15 30" />
+    <circle cx="250" cy="230" r="10" fill="#fff" stroke="#000" />
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(210 150)">1</text>
+  <path fill="none" stroke="#000" d="M285 130h15m-7.5-5 7.5 5-7.5 5" />
+  <g id="g" transform="translate(-10 -40)">
+    <use xlink:href="#f" transform="translate(160 40)" />
+    <circle cx="385" cy="260" r="10" fill="#fff" stroke="#000" />
+    <text x="385" y="263.5" font-size="10">B</text>
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(305 180)">0</text>
+  <path fill="none" stroke="#000" d="M15 130h15m-7.5-5 7.5 5-7.5 5M15 260h15m-7.5-5 7.5 5-7.5 5" />
+  <g id="h" transform="translate(-25 -40)">
+    <path fill="none" stroke="#000" d="m120 420 15-30 15 30" />
+    <use xlink:href="#g" transform="translate(-270 170)" />
+    <circle cx="135" cy="390" r="10" fill="#fff" stroke="#000" />
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(80 310)">1</text>
+  <path fill="none" stroke="#000" d="M135 260h15m-7.5-5 7.5 5-7.5 5" />
+  <g id="i" transform="translate(-30 -40)">
+    <use xlink:href="#h" transform="translate(165 40)" />
+    <circle cx="260" cy="420" r="10" fill="#fff" stroke="#000" />
+    <text x="260" y="423.5" font-size="10">D</text>
+    <circle cx="290" cy="420" r="10" fill="#fff" stroke="#000" />
+    <text x="290" y="423.5" font-size="10">E</text>
+  </g>
+  <text x="50" y="50" font-size="24" transform="translate(160 340)">0</text>
+  <text x="50" y="50" font-size="24" transform="translate(230 340)">0</text>
+  <use xlink:href="#i" transform="translate(145)" />
+  <path fill="none" stroke="#000" d="M275 260h15m-7.5-5 7.5 5-7.5 5" />
+  <circle cx="405" cy="320" r="10" fill="#fff" stroke="#000" />
+  <text x="405" y="324" font-size="10">F</text>
+  <text x="50" y="50" font-size="24" transform="translate(375 280)">0</text>
+</svg>
