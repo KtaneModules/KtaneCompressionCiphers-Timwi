@@ -22,8 +22,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
     public KMSelectable Submit;
     public KMSelectable[] Keyboard;
 
-    private List<string> _wordList;
-    private string[][] _pages = { new string[3], new string[3], new string[3] };
+    private readonly string[][] _pages = { new string[3], new string[3], new string[3] };
     private string _answer;
     private int _page;
     private bool _submitScreen;
