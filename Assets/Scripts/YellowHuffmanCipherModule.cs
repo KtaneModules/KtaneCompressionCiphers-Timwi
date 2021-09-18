@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using HuffmanCipher;
 using KModkit;
 using UnityEngine;
@@ -9,7 +10,7 @@ using Words;
 
 using Rnd = UnityEngine.Random;
 
-public class RedHuffmanCipherModule : MonoBehaviour
+public class YellowHuffmanCipherModule : MonoBehaviour
 {
     public TextMesh[] ScreenTexts;
     public KMBombInfo Bomb;
@@ -52,8 +53,8 @@ public class RedHuffmanCipherModule : MonoBehaviour
         var restOfAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".Where(ch => !keywordReduced.Contains(ch)).Join("");
         var jumbledAlphabet = (Bomb.GetPortCount() & 2) != 0 ? restOfAlphabet + keywordReduced : keywordReduced + restOfAlphabet;
 
-        Debug.LogFormat("[Red Huffman Cipher #{0}] Keyword: {1}", _moduleId, keyword);
-        Debug.LogFormat("[Red Huffman Cipher #{0}] Jumbled alphabet: {1}", _moduleId, jumbledAlphabet);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Keyword: {1}", _moduleId, keyword);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Jumbled alphabet: {1}", _moduleId, jumbledAlphabet);
 
         tryAgain:
         var treeLogMessages = new List<string>();
@@ -97,7 +98,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
         tree.Populate(jumbledAlphabet, ref alphabetIx);
         if (alphabetIx != 26)
             throw new InvalidOperationException("alphabet is " + alphabetIx);
-        treeLogMessages.Add(string.Format("[Red Huffman Cipher #{0}] Decoded tree: {1}", _moduleId, tree));
+        treeLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Decoded tree: {1}", _moduleId, tree));
 
         // Encode everything in letters
         var encodedBits = new List<int>();
@@ -107,17 +108,17 @@ public class RedHuffmanCipherModule : MonoBehaviour
         foreach (var letter in _answer)
         {
             encodedBits.AddRange(tree.EncodeBits(letter));
-            encWordLogMessages.Add(string.Format("[Red Huffman Cipher #{0}] {1} decodes to {2}", _moduleId, encodedBits.Skip(prevEncodedIx).Join(""), letter));
+            encWordLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} decodes to {2}", _moduleId, encodedBits.Skip(prevEncodedIx).Join(""), letter));
             prevEncodedIx = encodedBits.Count;
         }
-        treeLogMessages.Add(string.Format("[Red Huffman Cipher #{0}] Leftover binary: {1}", _moduleId, encodedBits.Skip(startEncodedIx).Join("")));
+        treeLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Leftover binary: {1}", _moduleId, encodedBits.Skip(startEncodedIx).Join("")));
 
         var encodedBitsStr = encodedBits.Join("");
         var encodedData = encodeData(encodedBits, encBinaryLogMessages);
         if (encodedData == null || encodedData.Length > 20)
             goto tryAgain;
-        Debug.LogFormat("[Red Huffman Cipher #{0}] Encrypted data on module: {1}", _moduleId, encodedData);
-        Debug.LogFormat("[Red Huffman Cipher #{0}] String of binary: {1}", _moduleId, encodedBitsStr);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Encrypted data on module: {1}", _moduleId, encodedData);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] String of binary: {1}", _moduleId, encodedBitsStr);
 
         foreach (var msg in treeLogMessages)
             Debug.Log(msg);
@@ -125,7 +126,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
             Debug.Log(msg);
         foreach (var msg in encWordLogMessages)
             Debug.Log(msg);
-        Debug.LogFormat("[Red Huffman Cipher #{0}] Solution word: {1}", _moduleId, _answer);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Solution word: {1}", _moduleId, _answer);
 
         var numLettersPerScreen = encodedData.Length / 4d;
         for (var screen = 0; screen < 4; screen++)
@@ -138,7 +139,6 @@ public class RedHuffmanCipherModule : MonoBehaviour
         _pages[1][2] = keyword;
 
         getScreens();
-        MakeExample();
     }
 
     private string encodeData(List<int> encodedBits, List<string> encBinaryLogMessages)
@@ -153,7 +153,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
             {
                 encodedWord += (char) ('A' + 10 + ((encodedBits[0] << 3) | (encodedBits[1] << 2) | (encodedBits[2] << 1) | (encodedBits[3])));
                 if (encBinaryLogMessages != null)
-                    encBinaryLogMessages.Add(string.Format("[Red Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(4).Join("")));
+                    encBinaryLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(4).Join("")));
                 encodedBits.RemoveRange(0, 4);
             }
             else
@@ -163,7 +163,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
 
                 encodedWord += (char) ('A' + ((encodedBits[0] << 4) | (encodedBits[1] << 3) | (encodedBits[2] << 2) | (encodedBits[3] << 1) | (encodedBits[4])));
                 if (encBinaryLogMessages != null)
-                    encBinaryLogMessages.Add(string.Format("[Red Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(5).Join("")));
+                    encBinaryLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(5).Join("")));
                 encodedBits.RemoveRange(0, 5);
             }
         }
@@ -171,6 +171,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
         return encodedWord;
     }
 
+    // Not used by the module. This was used to generate an example for the manual, but that is now done.
     void MakeExample()
     {
         var keyword = "CABDEF";
@@ -243,7 +244,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
         foreach (var msg in treeLogMessages)
             Debug.Log(msg);
         foreach (var msg in encBinaryLogMessages)
-            Debug.Log(msg);
+            Debug.Log(Regex.Replace(msg, "^" + Regex.Escape(string.Format("[Yellow Huffman Cipher #{0}]", _moduleId)), "EXAMPLE —"));
         foreach (var msg in encWordLogMessages)
             Debug.Log(msg);
         Debug.LogFormat("EXAMPLE — Solution word: {1}", _moduleId, answer);
@@ -334,7 +335,7 @@ public class RedHuffmanCipherModule : MonoBehaviour
     }
 
 #pragma warning disable 414
-    private string TwitchHelpMessage = "Move to other screens using !{0} right|left|r|l|. Submit the decrypted word with !{0} submit qwertyuiopasdfghjklzxcvbnm";
+    private string TwitchHelpMessage = "!{0} right/left [move between screens] | !{0} submit answer";
 #pragma warning restore 414
 
     IEnumerator ProcessTwitchCommand(string command)

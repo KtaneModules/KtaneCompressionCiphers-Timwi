@@ -22,7 +22,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
     public KMSelectable Submit;
     public KMSelectable[] Keyboard;
 
-    private readonly string[][] _pages = { new string[3], new string[3], new string[3] };
+    private readonly string[][] _pages = { new string[3], new string[3] };
     private string _answer;
     private int _page;
     private bool _submitScreen;
@@ -148,6 +148,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
         getScreens();
     }
 
+    // Not used by the module. This was used to generate an example for the manual, but that is now done.
     void MakeExample()
     {
         var answer = "FACADE";
@@ -354,7 +355,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
     }
 
 #pragma warning disable 414
-    private string TwitchHelpMessage = "Move to other screens using !{0} right|left|r|l|. Submit the decrypted word with !{0} submit qwertyuiopasdfghjklzxcvbnm";
+    private string TwitchHelpMessage = "!{0} right/left [move between screens] | !{0} submit answer";
 #pragma warning restore 414
 
     IEnumerator ProcessTwitchCommand(string command)

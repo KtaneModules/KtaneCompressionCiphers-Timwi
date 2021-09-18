@@ -15,7 +15,8 @@ MonoBehaviour:
   title: Cipher Modules
   author: Timwi
   description: "Contains a number of cipher modules (modeled after Sean\u2019s colored
-    cipher module pack) based around data compression algorithms (Huffman and Lempel-Ziv)."
+    cipher module pack) based around data compression algorithms (Huffman coding,
+    possibly more to come)."
   version: 1.0
   outputFolder: build
-  previewImage: {fileID: 2800000, guid: 99188691c58ac6e44adfd54e75191b69, type: 3}
+  previewImage: {fileID: 2800000, guid: a96399c3a0b98a04494b8cc0928cfa11, type: 3}
