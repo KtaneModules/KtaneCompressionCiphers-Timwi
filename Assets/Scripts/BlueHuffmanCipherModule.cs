@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using HuffmanCipher;
 using UnityEngine;
 using Words;
 
 using Rnd = UnityEngine.Random;
 
-public class BlueHuffmanCipherModule : MonoBehaviour
+public class BlueHuffmanCipherModule : HuffmanBase
 {
     public TextMesh[] ScreenTexts;
     public KMBombInfo Bomb;
@@ -49,7 +51,6 @@ public class BlueHuffmanCipherModule : MonoBehaviour
         tryAgain:
 
         var treeLogMessages = new List<string>();
-        var encBinaryLogMessages = new List<string>();
         var encWordLogMessages = new List<string>();
 
         var fakeAlphabetScores = "";
@@ -63,7 +64,6 @@ public class BlueHuffmanCipherModule : MonoBehaviour
         _page = 0;
 
         var nodes = fakeAlphabetScores.Select((ch, ix) => (HuffmanNode) new HuffmanLeaf(ch - 'A' + 1, (char) ('A' + ix))).ToList();
-        treeLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Letters on the module: {1}", _moduleId, fakeAlphabetScores));
 
         while (nodes.Count > 1)
         {
@@ -87,27 +87,28 @@ public class BlueHuffmanCipherModule : MonoBehaviour
                 }
             }
 
-            var newNode = new HuffmanBranch(lowestScoreNode, secondLowestScoreNode);
+            treeLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Combining {1} {2} {3}",
+                _moduleId, nodes.IndexOf(lowestScoreNode) + 1, nodes.IndexOf(secondLowestScoreNode) + 1, generateStepSvg(nodes, lowestScoreNode, secondLowestScoreNode, showScore: true)));
+
+            var newNode = new HuffmanParentNode(lowestScoreNode, secondLowestScoreNode);
             nodes.RemoveAt(Math.Max(lowestIx, secondLowestIx));
             nodes.RemoveAt(Math.Min(lowestIx, secondLowestIx));
             nodes.Add(newNode);
-            treeLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Combining {1} ({2}) and {3} ({4}), tree is now: {5}",
-                _moduleId, lowestScoreNode, lowestScoreNode.Score, secondLowestScoreNode, secondLowestScoreNode.Score, nodes.Join(", ")));
         }
-        var root = nodes[0];
-        treeLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Finished tree: {1}", _moduleId, root));
+        var tree = nodes[0];
+        treeLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Final 0 {1}", _moduleId, generateStepSvgNoScore(tree)));
 
         var encodedBits = new List<int>();
         var prevEncodedIx = 0;
         foreach (var letter in _answer)
         {
-            encodedBits.AddRange(root.EncodeBits(letter));
-            encWordLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] {1} decodes to {2}", _moduleId, encodedBits.Skip(prevEncodedIx).Join(""), letter));
+            encodedBits.AddRange(tree.EncodeBits(letter));
+            encWordLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] Decode {1} {2} {3}", _moduleId, prevEncodedIx, encodedBits.Count, letter));
             prevEncodedIx = encodedBits.Count;
         }
 
-        var encodedWord = "";
-        var encodedBitsStr = encodedBits.Join("");
+        var encodedData = "";
+        var encodedPieces = new List<string>();
         while (encodedBits.Count > 0)
         {
             if (encodedBits.Count < 4)
@@ -115,8 +116,8 @@ public class BlueHuffmanCipherModule : MonoBehaviour
 
             if (encodedBits[0] != 0 && (encodedBits[1] != 0 || encodedBits[2] != 0))
             {
-                encodedWord += (char) ('A' + 10 + ((encodedBits[0] << 3) | (encodedBits[1] << 2) | (encodedBits[2] << 1) | (encodedBits[3])));
-                encBinaryLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(4).Join("")));
+                encodedData += (char) ('A' + 10 + ((encodedBits[0] << 3) | (encodedBits[1] << 2) | (encodedBits[2] << 1) | (encodedBits[3])));
+                encodedPieces.Add(string.Format("{0}={1}", encodedData.Last(), encodedBits.Take(4).Join("")));
                 encodedBits.RemoveRange(0, 4);
             }
             else
@@ -124,26 +125,25 @@ public class BlueHuffmanCipherModule : MonoBehaviour
                 if (encodedBits.Count < 5)
                     goto tryAgain;
 
-                encodedWord += (char) ('A' + ((encodedBits[0] << 4) | (encodedBits[1] << 3) | (encodedBits[2] << 2) | (encodedBits[3] << 1) | (encodedBits[4])));
-                encBinaryLogMessages.Add(string.Format("[Blue Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(5).Join("")));
+                encodedData += (char) ('A' + ((encodedBits[0] << 4) | (encodedBits[1] << 3) | (encodedBits[2] << 2) | (encodedBits[3] << 1) | (encodedBits[4])));
+                encodedPieces.Add(string.Format("{0}={1}", encodedData.Last(), encodedBits.Take(5).Join("")));
                 encodedBits.RemoveRange(0, 5);
             }
         }
 
-        if (encodedWord.Length > 7)
+        if (encodedData.Length > 7)
             goto tryAgain;
 
+        Debug.LogFormat("[Blue Huffman Cipher #{0}] Letters {1}", _moduleId, fakeAlphabetScores);
         foreach (var msg in treeLogMessages)
             Debug.Log(msg);
-        Debug.LogFormat("[Blue Huffman Cipher #{0}] Encoded word: {1}", _moduleId, encodedWord);
-        foreach (var msg in encBinaryLogMessages)
-            Debug.Log(msg);
-        Debug.LogFormat("[Blue Huffman Cipher #{0}] String of binary: {1}", _moduleId, encodedBitsStr);
+        Debug.LogFormat("[Blue Huffman Cipher #{0}] Binary 1 {1}", _moduleId, encodedPieces.Join(";"));
         foreach (var msg in encWordLogMessages)
             Debug.Log(msg);
+        Debug.LogFormat("[Blue Huffman Cipher #{0}] Solution {1}", _moduleId, _answer);
         Debug.LogFormat("[Blue Huffman Cipher #{0}] Solution word: {1}", _moduleId, _answer);
 
-        _pages[1][2] = encodedWord;
+        _pages[1][2] = encodedData;
 
         getScreens();
     }
@@ -200,6 +200,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
             if (ScreenTexts[2].text.Equals(_answer))
             {
                 Audio.PlaySoundAtTransform(Sounds[2].name, transform);
+                Debug.LogFormat("[Blue Huffman Cipher #{0}] Module solved.", _moduleId);
                 Module.HandlePass();
                 _moduleSolved = true;
                 ScreenTexts[2].text = "";
@@ -207,6 +208,7 @@ public class BlueHuffmanCipherModule : MonoBehaviour
             else
             {
                 Audio.PlaySoundAtTransform(Sounds[3].name, transform);
+                Debug.LogFormat("[Blue Huffman Cipher #{0}] You submitted {1}. Strike!", _moduleId, ScreenTexts[2].text);
                 Module.HandleStrike();
                 _page = 0;
                 getScreens();

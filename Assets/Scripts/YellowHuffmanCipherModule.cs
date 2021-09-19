@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using HuffmanCipher;
 using KModkit;
 using UnityEngine;
@@ -10,7 +9,7 @@ using Words;
 
 using Rnd = UnityEngine.Random;
 
-public class YellowHuffmanCipherModule : MonoBehaviour
+public class YellowHuffmanCipherModule : HuffmanBase
 {
     public TextMesh[] ScreenTexts;
     public KMBombInfo Bomb;
@@ -86,7 +85,7 @@ public class YellowHuffmanCipherModule : MonoBehaviour
                 }
             }
 
-            var newNode = new HuffmanBranch(lowestScoreNode, secondLowestScoreNode);
+            var newNode = new HuffmanParentNode(lowestScoreNode, secondLowestScoreNode);
             nodes.RemoveAt(Math.Max(lowestIx, secondLowestIx));
             nodes.RemoveAt(Math.Min(lowestIx, secondLowestIx));
             nodes.Add(newNode);
@@ -96,9 +95,7 @@ public class YellowHuffmanCipherModule : MonoBehaviour
         // Populate the tree with the jumbled alphabet
         var alphabetIx = 0;
         tree.Populate(jumbledAlphabet, ref alphabetIx);
-        if (alphabetIx != 26)
-            throw new InvalidOperationException("alphabet is " + alphabetIx);
-        treeLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Decoded tree: {1}", _moduleId, tree));
+        treeLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Final 1 {1}", _moduleId, generateStepSvgNoScore(tree, useDepthInfo: true)));
 
         // Encode everything in letters
         var encodedBits = new List<int>();
@@ -108,17 +105,38 @@ public class YellowHuffmanCipherModule : MonoBehaviour
         foreach (var letter in _answer)
         {
             encodedBits.AddRange(tree.EncodeBits(letter));
-            encWordLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} decodes to {2}", _moduleId, encodedBits.Skip(prevEncodedIx).Join(""), letter));
+            encWordLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Decode {1} {2} {3}", _moduleId, prevEncodedIx, encodedBits.Count, letter));
             prevEncodedIx = encodedBits.Count;
         }
-        treeLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] Leftover binary: {1}", _moduleId, encodedBits.Skip(startEncodedIx).Join("")));
 
-        var encodedBitsStr = encodedBits.Join("");
-        var encodedData = encodeData(encodedBits, encBinaryLogMessages);
-        if (encodedData == null || encodedData.Length > 20)
+        var encodedPieces = new List<string>();
+        var encodedData = "";
+        while (encodedBits.Count > 0)
+        {
+            if (encodedBits.Count < 4)
+                goto tryAgain;
+
+            if (encodedBits[0] != 0 && (encodedBits[1] != 0 || encodedBits[2] != 0))
+            {
+                encodedData += (char) ('A' + 10 + ((encodedBits[0] << 3) | (encodedBits[1] << 2) | (encodedBits[2] << 1) | (encodedBits[3])));
+                encodedPieces.Add(string.Format("{0}={1}", encodedData.Last(), encodedBits.Take(4).Join("")));
+                encodedBits.RemoveRange(0, 4);
+            }
+            else
+            {
+                if (encodedBits.Count < 5)
+                    goto tryAgain;
+
+                encodedData += (char) ('A' + ((encodedBits[0] << 4) | (encodedBits[1] << 3) | (encodedBits[2] << 2) | (encodedBits[3] << 1) | (encodedBits[4])));
+                encodedPieces.Add(string.Format("{0}={1}", encodedData.Last(), encodedBits.Take(5).Join("")));
+                encodedBits.RemoveRange(0, 5);
+            }
+        }
+        if (encodedData.Length > 20)
             goto tryAgain;
-        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Encrypted data on module: {1}", _moduleId, encodedData);
-        Debug.LogFormat("[Yellow Huffman Cipher #{0}] String of binary: {1}", _moduleId, encodedBitsStr);
+
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Letters {1}", _moduleId, encodedData);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Binary 0 {1}", _moduleId, encodedPieces.Join(";"));
 
         foreach (var msg in treeLogMessages)
             Debug.Log(msg);
@@ -126,6 +144,7 @@ public class YellowHuffmanCipherModule : MonoBehaviour
             Debug.Log(msg);
         foreach (var msg in encWordLogMessages)
             Debug.Log(msg);
+        Debug.LogFormat("[Yellow Huffman Cipher #{0}] Solution {1}", _moduleId, _answer);
         Debug.LogFormat("[Yellow Huffman Cipher #{0}] Solution word: {1}", _moduleId, _answer);
 
         var numLettersPerScreen = encodedData.Length / 4d;
@@ -139,36 +158,6 @@ public class YellowHuffmanCipherModule : MonoBehaviour
         _pages[1][2] = keyword;
 
         getScreens();
-    }
-
-    private string encodeData(List<int> encodedBits, List<string> encBinaryLogMessages)
-    {
-        var encodedWord = "";
-        while (encodedBits.Count > 0)
-        {
-            if (encodedBits.Count < 4)
-                return null;
-
-            if (encodedBits[0] != 0 && (encodedBits[1] != 0 || encodedBits[2] != 0))
-            {
-                encodedWord += (char) ('A' + 10 + ((encodedBits[0] << 3) | (encodedBits[1] << 2) | (encodedBits[2] << 1) | (encodedBits[3])));
-                if (encBinaryLogMessages != null)
-                    encBinaryLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(4).Join("")));
-                encodedBits.RemoveRange(0, 4);
-            }
-            else
-            {
-                if (encodedBits.Count < 5)
-                    return null;
-
-                encodedWord += (char) ('A' + ((encodedBits[0] << 4) | (encodedBits[1] << 3) | (encodedBits[2] << 2) | (encodedBits[3] << 1) | (encodedBits[4])));
-                if (encBinaryLogMessages != null)
-                    encBinaryLogMessages.Add(string.Format("[Yellow Huffman Cipher #{0}] {1} becomes {2}", _moduleId, encodedWord.Last(), encodedBits.Take(5).Join("")));
-                encodedBits.RemoveRange(0, 5);
-            }
-        }
-
-        return encodedWord;
     }
 
     void left(KMSelectable arrow)
@@ -212,6 +201,7 @@ public class YellowHuffmanCipherModule : MonoBehaviour
             if (ScreenTexts[2].text.Equals(_answer))
             {
                 Audio.PlaySoundAtTransform(Sounds[2].name, transform);
+                Debug.LogFormat("[Yellow Huffman Cipher #{0}] Module solved.", _moduleId);
                 Module.HandlePass();
                 _moduleSolved = true;
                 ScreenTexts[2].text = "";
@@ -219,6 +209,7 @@ public class YellowHuffmanCipherModule : MonoBehaviour
             else
             {
                 Audio.PlaySoundAtTransform(Sounds[3].name, transform);
+                Debug.LogFormat("[Yellow Huffman Cipher #{0}] You submitted {1}. Strike!", _moduleId, ScreenTexts[2].text);
                 Module.HandleStrike();
                 _page = 0;
                 getScreens();
