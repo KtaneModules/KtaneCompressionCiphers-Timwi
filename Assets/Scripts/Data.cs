@@ -27,7 +27,7 @@ namespace Words
 
         public Data()
         {
-            allWords = allWordsRaw.GroupBy(str => str.Length).Select(gr => gr.ToList()).ToArray();
+            allWords = allWordsRaw.GroupBy(str => str.Length).OrderBy(gr => gr.Key).Select(gr => gr.ToList()).ToArray();
         }
 
         private static readonly string[] allWordsRaw = @"ABACK
