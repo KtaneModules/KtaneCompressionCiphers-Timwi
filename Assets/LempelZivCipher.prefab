@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 114182218208096760}
   - component: {fileID: 114175821319114266}
   m_Layer: 0
-  m_Name: YellowHuffmanCipher
+  m_Name: LempelZivCipher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3234,7 +3234,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476060975470908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4463667010345256}
@@ -4054,7 +4054,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 988ee35fa02101049a9f9691f8c1d554, type: 2}
+  - {fileID: 2100000, guid: 2456dda5918ed1d4081c78016c132233, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6991,7 +6991,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1476060975470908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1806874046, guid: 32ead2b08069d9f489a1bdc034cc45de, type: 3}
+  m_Script: {fileID: -1479731642, guid: 32ead2b08069d9f489a1bdc034cc45de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScreenTexts:
@@ -8142,8 +8142,8 @@ MonoBehaviour:
   m_Script: {fileID: -119419473, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModuleType: YellowHuffmanCipherModule
-  ModuleDisplayName: Yellow Huffman Cipher
+  ModuleType: LempelZivCipherModule
+  ModuleDisplayName: Lempel-Ziv Cipher
   RequiresTimerVisibility: 0
 --- !u!114 &114665288184365198
 MonoBehaviour:
