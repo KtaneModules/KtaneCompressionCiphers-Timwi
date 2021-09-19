@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HuffmanCipher;
-using UnityEngine;
 
-namespace HuffmanCipher
+namespace CipherModulesLib
 {
-    public abstract class HuffmanBase : MonoBehaviour
+    public abstract class HuffmanModuleBase : CipherModuleBase
     {
         internal string generateStepSvgNoScore(HuffmanNode node, bool useDepthInfo = false)
         {

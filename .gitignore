@@ -29,3 +29,7 @@ sysinfo.txt
 Assets/Generated
 Gen
 
+Lib/.vs/
+Lib/bin/
+Lib/obj/
+Lib/packages/

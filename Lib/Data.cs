@@ -3,7 +3,7 @@ using System.Linq;
 
 using Rnd = UnityEngine.Random;
 
-namespace Words
+namespace CipherModulesLib
 {
     sealed class Data
     {

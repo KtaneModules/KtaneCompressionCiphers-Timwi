@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HuffmanCipher
+namespace CipherModulesLib
 {
     abstract class HuffmanNode
     {
@@ -124,9 +124,9 @@ namespace HuffmanCipher
         {
             var alreadyHasTopLabel = topLabel != null && Labels.Any(l => l.Y == 0);
             return string.Format("<g stroke='black' stroke-width='.1'><g fill='none'>{0}</g><g fill='#fff'>{1}</g></g>{2}{3}",
-                Paths.Select(p => p.ToSvg(useDepthInfo)).Join(""),
-                Circles.Select(c => c.ToSvg(c.Y == 0 ? topHighlight : null, useCssClasses, useDepthInfo)).Join(""),
-                Labels.Select(l => l.ToSvg(l.Y == 0 && topLabel != null, useDepthInfo)).Join(""),
+                Paths.Select(p => p.ToSvg(useDepthInfo)).JoinString(),
+                Circles.Select(c => c.ToSvg(c.Y == 0 ? topHighlight : null, useCssClasses, useDepthInfo)).JoinString(),
+                Labels.Select(l => l.ToSvg(l.Y == 0 && topLabel != null, useDepthInfo)).JoinString(),
                 topLabel == null ? null : string.Format("<text x='0' y='{0}' font-size='{1}'>{2}</text>", alreadyHasTopLabel ? .8 : .4, alreadyHasTopLabel ? .5 : 1, topLabel));
         }
     }
@@ -149,7 +149,7 @@ namespace HuffmanCipher
         public SvgCircleInfo Move(double dx, string addToClass) { return new SvgCircleInfo(X + dx, Y + 3, CssClass + addToClass, Depth); }
         public string ToSvg(string fill = null, bool useCssClass = false, bool useDepthInfo = false)
         {
-            var cssClass = useCssClass || useDepthInfo ? string.Format(" class='{0}'", new[] { useCssClass ? CssClass : null, useDepthInfo ? "node-d" + Depth : null }.Where(s => s != null).Join(" ")) : null;
+            var cssClass = useCssClass || useDepthInfo ? string.Format(" class='{0}'", new[] { useCssClass ? CssClass : null, useDepthInfo ? "node-d" + Depth : null }.Where(s => s != null).JoinString(" ")) : null;
             return string.Format("<circle cx='{0}' cy='{1}' r='1'{2}{3}/>", X, Y, fill == null ? null : string.Format(" fill='{0}'", fill), cssClass);
         }
     }
