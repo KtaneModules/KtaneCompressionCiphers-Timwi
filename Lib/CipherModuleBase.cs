@@ -35,6 +35,12 @@ namespace CipherModulesLib
             Submit.OnInteract += delegate { submitWord(Submit); return false; };
             foreach (var keybutton in Keyboard)
                 keybutton.OnInteract += letterPress(keybutton);
+            StartCoroutine(updateScreensLater());
+        }
+
+        private IEnumerator updateScreensLater()
+        {
+            yield return null;
             updateScreens();
         }
 
@@ -103,7 +109,7 @@ namespace CipherModulesLib
             {
                 if (!_moduleSolved)
                 {
-                    pressed.AddInteractionPunch();
+                    pressed.AddInteractionPunch(.1f);
                     Audio.PlaySoundAtTransform(Sounds[1].name, transform);
                     if (_submitScreen)
                     {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using Rnd = UnityEngine.Random;
@@ -7,11 +8,13 @@ namespace CipherModulesLib
 {
     sealed class Data
     {
-        public string ChooseWord(int minLength, int maxLength)
+        public static readonly int[] Primes = new[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
+
+        public string ChooseWord(int minLength, int maxLength, Random rnd = null)
         {
             var candidates = Enumerable.Range(minLength - 4, maxLength - minLength + 1).ToArray();
             var cumulativeWeights = Enumerable.Range(0, candidates.Length).Select(i => candidates.Take(i + 1).Sum(ix => allWords[ix].Count)).ToArray();
-            var randomIx = Rnd.Range(0, cumulativeWeights.Last());
+            var randomIx = rnd == null ? Rnd.Range(0, cumulativeWeights.Last()) : rnd.Next(0, cumulativeWeights.Last());
             var lstIx = 0;
             while (randomIx >= allWords[lstIx].Count)
             {

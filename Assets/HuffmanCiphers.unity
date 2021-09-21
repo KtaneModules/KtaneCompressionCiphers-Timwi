@@ -194,6 +194,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1476060975470908, guid: e2708c9062601d4449178b5d04b1ce7c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2708c9062601d4449178b5d04b1ce7c, type: 2}
   m_IsPrefabParent: 0
@@ -239,6 +243,10 @@ Prefab:
     - target: {fileID: 1476060975470908, guid: 9deaf690beb24d646a3f2738aa78aeee, type: 2}
       propertyPath: m_Name
       value: YellowHuffmanCipher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476060975470908, guid: 9deaf690beb24d646a3f2738aa78aeee, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9deaf690beb24d646a3f2738aa78aeee, type: 2}
