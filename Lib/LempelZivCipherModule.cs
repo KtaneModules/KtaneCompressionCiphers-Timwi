@@ -16,7 +16,7 @@ public partial class LempelZivCipherModule : CipherModuleBase
 
         Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Letters on module: {puzzle.EncodedData}");
         Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Decoded binary: {puzzle.EncodedPieces.JoinString(";")}");
-        Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Generated dictionary: {puzzle.Dictionary.Select(tup => Enumerable.Range(0, tup.length).Select(bit => (tup.value >> bit) & 1).JoinString()).JoinString(";")}");
+        Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Generated dictionary: {puzzle.Dictionary.Select(tup => Enumerable.Range(0, tup.length).Select(bit => (tup.value >> (tup.length - 1 - bit)) & 1).JoinString()).JoinString("; ")}");
         Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Decoded bitmap ({puzzle.Width}×{puzzle.Height}): {puzzle.Bitmap.Take(puzzle.Bitmap.Length - 1).Select(b => b ? 1 : 0).JoinString()}\n{puzzle.Bitmap.Take(puzzle.Bitmap.Length - 1).Split(puzzle.Width).Select(row => row.Select(b => b ? "█" : "░").JoinString()).JoinString("\n")}"); ;
         Debug.Log($"[Lempel-Ziv Cipher #{_moduleId}] Solution: {puzzle.Answer} ({puzzle.AlphabetName})");
         _answer = puzzle.Answer;
