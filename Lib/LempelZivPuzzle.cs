@@ -94,7 +94,7 @@ namespace CipherModulesLib
                             }
                         }
                         if (encodedData.Length <= 25)
-                            candidatePuzzles.Add(new LempelZivPuzzle(word, w, h, binaryData, output, outputSymbols, dictionary, encodedPieces, encodedData, alphabet.Name));
+                            candidatePuzzles.Add(new LempelZivPuzzle(word, w, binaryData.Length / w, binaryData, output, outputSymbols, dictionary, encodedPieces, encodedData, alphabet.Name));
 
                         invalid:
                         if (oneLine)
