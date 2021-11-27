@@ -24,6 +24,7 @@ namespace CipherModulesLib
         private int _page;
         private bool _submitScreen;
         private bool _moduleSolved;
+        private bool _moduleSelected;
 
         protected abstract string loggingTag { get; }
         protected abstract int getFontSize(int page, int screen);
@@ -33,6 +34,8 @@ namespace CipherModulesLib
             LeftArrow.OnInteract += delegate { left(LeftArrow); return false; };
             RightArrow.OnInteract += delegate { right(RightArrow); return false; };
             Submit.OnInteract += delegate { submitWord(Submit); return false; };
+            Module.GetComponent<KMSelectable>().OnFocus += delegate { _moduleSelected = true; };
+            Module.GetComponent<KMSelectable>().OnDefocus += delegate { _moduleSelected = false; };
             foreach (var keybutton in Keyboard)
                 keybutton.OnInteract += letterPress(keybutton);
             StartCoroutine(updateScreensLater());
@@ -189,6 +192,18 @@ namespace CipherModulesLib
         private int getPositionFromChar(char c)
         {
             return "QWERTYUIOPASDFGHJKLZXCVBNM".IndexOf(c);
+        }
+
+        void Update()
+        {
+            if (_moduleSelected)
+            {
+                for (var ltr = 0; ltr < 26; ltr++)
+                    if (Input.GetKeyDown(((char) ('a' + ltr)).ToString()))
+                        Keyboard[getPositionFromChar((char) ('A' + ltr))].OnInteract();
+                if (Input.GetKeyDown(KeyCode.Return))
+                    Submit.OnInteract();
+            }
         }
     }
 }
