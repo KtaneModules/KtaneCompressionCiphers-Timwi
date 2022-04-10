@@ -114,7 +114,4 @@ public class BlueHuffmanCipherModule : HuffmanModuleBase
 
         _pages[1][2] = encodedData;
     }
-
-    protected override int getFontSize(int page, int screen) =>
-        page == 1 && screen == 2 && _pages[1][2].Count(ch => ch == 'W' || ch == 'M') > 4 ? 30 : 35;
 }

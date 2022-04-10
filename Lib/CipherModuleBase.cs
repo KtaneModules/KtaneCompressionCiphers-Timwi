@@ -27,7 +27,6 @@ namespace CipherModulesLib
         private bool _moduleSelected;
 
         protected abstract string loggingTag { get; }
-        protected abstract int getFontSize(int page, int screen);
 
         void Awake()
         {
@@ -77,9 +76,11 @@ namespace CipherModulesLib
             for (var screen = 0; screen < 3; screen++)
             {
                 ScreenTexts[screen].text = _pages[_page][screen] ?? "";
-                ScreenTexts[screen].fontSize = getFontSize(_page, screen);
+                ScreenTexts[screen].fontSize = getFontSize(_pages[_page][screen]?.Length);
             }
         }
+
+        private int getFontSize(int? length) => length == null || length.Value < 6 ? 45 : length.Value == 6 ? 40 : length.Value == 7 ? 35 : 30;
 
         void submitWord(KMSelectable submitButton)
         {

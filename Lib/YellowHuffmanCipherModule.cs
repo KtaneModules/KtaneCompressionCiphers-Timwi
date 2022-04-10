@@ -131,12 +131,4 @@ public class YellowHuffmanCipherModule : HuffmanModuleBase
 
         _pages[1][2] = keyword;
     }
-
-    protected override int getFontSize(int page, int screen)
-    {
-        if (page != 1 || screen != 2)
-            return 40;
-        var bigLetters = ScreenTexts[2].text.Count(ch => ch == 'W' || ch == 'M');
-        return bigLetters > 5 ? 27 : bigLetters > 2 ? 30 : 35;
-    }
 }

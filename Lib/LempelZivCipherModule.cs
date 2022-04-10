@@ -30,6 +30,4 @@ public partial class LempelZivCipherModule : CipherModuleBase
             _pages[screen / 3][screen % 3] = puzzle.EncodedData.Substring(start, end - start);
         }
     }
-
-    protected override int getFontSize(int page, int screen) => 40;
 }
