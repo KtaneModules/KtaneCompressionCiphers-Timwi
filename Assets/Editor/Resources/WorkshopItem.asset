@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 2604427370
-  Title: Cipher Modules
+  Title: Compression Ciphers
   Tags:
   - Regular Module
