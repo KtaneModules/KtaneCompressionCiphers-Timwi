@@ -5,7 +5,7 @@ using CipherModulesLib;
 using UnityEngine;
 using Rnd = UnityEngine.Random;
 
-public partial class ArithmeticCipherModule : CipherModuleBase
+public class ArithmeticCipherModule : CipherModuleBase
 {
     private static int _moduleIdCounter = 1;
     private int _moduleId;

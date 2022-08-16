@@ -3,7 +3,7 @@ using System.Linq;
 using CipherModulesLib;
 using UnityEngine;
 
-public partial class LempelZivCipherModule : CipherModuleBase
+public class LempelZivCipherModule : CipherModuleBase
 {
     private static int _moduleIdCounter = 1;
     private int _moduleId;
