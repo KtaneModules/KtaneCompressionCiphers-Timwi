@@ -15,7 +15,7 @@ namespace CipherModulesLib
             var candidates = Enumerable.Range(minLength - 4, maxLength - minLength + 1).ToArray();
             var cumulativeWeights = Enumerable.Range(0, candidates.Length).Select(i => candidates.Take(i + 1).Sum(ix => allWords[ix].Count)).ToArray();
             var randomIx = rnd == null ? Rnd.Range(0, cumulativeWeights.Last()) : rnd.Next(0, cumulativeWeights.Last());
-            var lstIx = 0;
+            var lstIx = minLength - 4;
             while (randomIx >= allWords[lstIx].Count)
             {
                 randomIx -= allWords[lstIx].Count;
