@@ -6,7 +6,7 @@ using System.Text;
 
 using Rnd = UnityEngine.Random;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     static class Ut
     {

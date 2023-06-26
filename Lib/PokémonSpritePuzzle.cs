@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     public class PokémonSpritePuzzle : BitmapPuzzleBase<PokémonSpritePuzzle>
     {

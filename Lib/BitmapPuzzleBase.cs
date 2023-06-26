@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Rnd = UnityEngine.Random;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     public abstract class BitmapPuzzleBase<TPuzzle>
     {

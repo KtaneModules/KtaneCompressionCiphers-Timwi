@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     public abstract class HuffmanModuleBase : CipherModuleBase
     {

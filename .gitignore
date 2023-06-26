@@ -25,6 +25,11 @@ ExportedObj/
 sysinfo.txt
 
 *.csproj
+!Lib/*.csproj
+
+*.sln
+!Lib/*.sln
+
 /Assets/Generated.meta
 Assets/Generated
 Gen

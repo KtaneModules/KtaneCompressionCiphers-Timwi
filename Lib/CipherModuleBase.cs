@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     public abstract class CipherModuleBase : MonoBehaviour
     {

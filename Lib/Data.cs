@@ -4,7 +4,7 @@ using System.Linq;
 
 using Rnd = UnityEngine.Random;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     sealed class Data
     {

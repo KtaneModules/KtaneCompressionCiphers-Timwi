@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using CipherModulesLib;
+using CompressionCiphersLib;
 using UnityEngine;
 
 public class PokémonSpriteCipherModule : CipherModuleBase

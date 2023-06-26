@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CipherModulesLib
+namespace CompressionCiphersLib
 {
     public class LempelZivPuzzle : BitmapPuzzleBase<LempelZivPuzzle>
     {

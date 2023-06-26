@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CipherModulesLib;
+using CompressionCiphersLib;
 using UnityEngine;
 using Rnd = UnityEngine.Random;
 

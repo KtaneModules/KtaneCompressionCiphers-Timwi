@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CipherModulesLib")]
+[assembly: AssemblyTitle("CompressionCiphersLib")]
 [assembly: AssemblyDescription("Library containing code for the KTANE module pack “Compression Ciphers” by Timwi.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CipherModulesLib")]
+[assembly: AssemblyProduct("CompressionCiphersLib")]
 [assembly: AssemblyCopyright("Copyright © Timwi 2021–2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
