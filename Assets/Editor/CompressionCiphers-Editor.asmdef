@@ -1,0 +1,10 @@
+{
+  "name": "CompressionCiphers-Editor",
+  "references": [
+    "CompressionCiphers"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}

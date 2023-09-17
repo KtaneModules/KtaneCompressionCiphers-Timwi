@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace KModkit
+namespace CompressionCiphersLib
 {
-    public enum Battery
+    internal enum Battery
     {
         Unknown = 0,
         Empty = 0,
@@ -15,7 +15,7 @@ namespace KModkit
         AAx4 = 4
     }
 
-    public enum Port
+    internal enum Port
     {
         DVI,
         Parallel,
@@ -32,7 +32,7 @@ namespace KModkit
         PCMCIA
     }
 
-    public enum Indicator
+    internal enum Indicator
     {
         SND,
         CLR,
@@ -48,7 +48,7 @@ namespace KModkit
         NLL
     }
 
-    public enum IndicatorColor
+    internal enum IndicatorColor
     {
         Black,
         White,
@@ -65,7 +65,7 @@ namespace KModkit
     /// <summary>
     /// Some helper extensions methods for the KMBombInfo class.
     /// </summary>
-    public static class KMBombInfoExtensions
+    internal static class KMBombInfoExtensions
     {
         #region JSON Types
 
